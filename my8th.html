@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        let studenOfCass = Array();
+
+        function input() {
+            let name
+            do {
+                name = prompt("nhap ho ten. (nhap 'q' de ket thuc)");
+                if (name!=='q')
+                    studenOfCass.push(name);
+            }while (name!=='q');
+        }
+
+        function show() {
+            document.write("so sinh vien : " + studenOfCass.length + "<br>");
+            for (let name in studenOfCass.length){
+                document.write(studenOfCass[name] + "<br>");
+
+            }
+        }
+        input();
+        document.write("<br> truoc khi dao nguoc <br>");
+        show();
+        document.write("<br> sau khi dao nguoc <br>");
+        studenOfCass = studenOfCass.reverse();
+        show();
+
+        document.write("<br> dao nguoc gia tri hai phan tu dau <br>");
+        let tmp = studenOfCass[0];
+        studenOfCass[0] = studenOfCass[1];
+        studenOfCass[1] = tmp;
+        show();
+
+        document.write("<br> noi cac phan tu <br>");
+        document.write(studenOfCass.join("<br>"));
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
